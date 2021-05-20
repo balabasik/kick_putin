@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "Kick Putin",
+    "slug": "kick-putin",
+    "version": "1.0.10",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.balabasik.kick-putin"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundImage": "./assets/icon_android.png",
+        "foregroundImage": "./assets/icon_android.png"
+      },
+      "package": "kick_putin.apk",
+      "permissions": ["VIBRATE"],
+      "versionCode": 10
+    },
+    "web": {
+      "favicon": "./assets/icon.png"
+    },
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": [
+        "expo.ts",
+        "expo.tsx",
+        "expo.js",
+        "expo.jsx",
+        "ts",
+        "tsx",
+        "js",
+        "jsx",
+        "json",
+        "wasm",
+        "svg"
+      ]
+    }
+  }
+}
