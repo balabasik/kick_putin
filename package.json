@@ -1,27 +1,42 @@
 {
+  "name": "update_2025",
   "main": "node_modules/expo/AppEntry.js",
+  "version": "1.0.0",
   "scripts": {
     "start": "expo start",
+    "reset-project": "node ./scripts/reset-project.js",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "lint": "expo lint"
   },
   "dependencies": {
-    "expo": "^41.0.1",
-    "expo-av": "^9.1.2",
-    "expo-font": "^9.1.0",
-    "expo-haptics": "^10.0.0",
-    "expo-localization": "^10.1.0",
-    "fast-xml-parser": "^3.19.0",
-    "react": "^16.13.1",
-    "react-native": "^0.63.2"
+    "@expo/vector-icons": "^14.1.0",
+    "@expo/webpack-config": "18.0.1",
+    "expo": "~53.0.10",
+    "expo-av": "~15.1.5",
+    "expo-blur": "~14.1.5",
+    "expo-constants": "~17.1.6",
+    "expo-font": "~13.3.1",
+    "expo-haptics": "~14.1.4",
+    "expo-image": "~2.2.0",
+    "expo-linking": "~7.1.5",
+    "expo-localization": "~16.1.5",
+    "expo-splash-screen": "~0.30.9",
+    "expo-status-bar": "~2.2.3",
+    "expo-system-ui": "~5.0.8",
+    "fast-xml-parser": "^5.2.3",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-native": "0.79.3",
+    "react-native-web": "^0.20.0"
   },
   "devDependencies": {
-    "@babel/core": "~7.9.0",
-    "eslint-plugin-react": "^7.23.2",
-    "react-dom": "^17.0.2",
-    "react-native-web": "^0.16.2"
+    "@babel/core": "^7.25.2",
+    "@types/react": "~19.0.10",
+    "eslint": "^9.25.0",
+    "eslint-config-expo": "~9.2.0",
+    "typescript": "~5.8.3"
   },
   "private": true
 }

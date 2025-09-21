@@ -1,17 +1,16 @@
 /* eslint-disable react/prop-types */
+import * as Localization from "expo-localization";
 import React from "react";
+import { View } from "react-native";
+import Consts from "./src/Consts";
 import Game from "./src/Game";
 import Menu from "./src/Menu";
 import Styles from "./src/Styles";
-import { View } from "react-native";
-import Consts from "./src/Consts";
-import * as Localization from "expo-localization";
 
 function GetLocale() {
   if (Consts.isWeb) return "eng";
   let locale = Localization.locale;
   console.log(locale);
-  //console.log(locale.substring(0, 2));
   if (
     locale == undefined ||
     typeof locale != "string" ||
@@ -66,15 +65,8 @@ class App extends React.Component {
     this.setState({ activeId });
   }
 
-  handleCanvas = (canvas) => {
-    console.log(canvas);
-    //const ctx = canvas.getContext("2d");
-    //ctx.fillStyle = "purple";
-    //ctx.fillRect(0, 0, 100, 100);
-  };
-
   render() {
-    // Both menu and game will be active, but we change their relative order,
+    // Both menu and game will be active, but we change their relative order
     let menu = (
       <Menu
         key="menu"
@@ -100,4 +92,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default App; 

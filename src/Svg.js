@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import XML from "fast-xml-parser";
+import { XMLParser } from "fast-xml-parser";
 
 function GetTranslateProps(transform) {
   if (transform == undefined || transform == "") return undefined;
@@ -63,13 +63,15 @@ function ParseCorners(str) {
   return ret;
 }
 
-var options = {
-  ignoreAttributes: false,
+const options = {
   attributeNamePrefix: "",
+  ignoreAttributes: false,
+  allowBooleanAttributes: true,
 };
 
 function ParseSvg(svgXml) {
-  let svg = XML.parse(svgXml, options).svg;
+  const parser = new XMLParser(options);
+  let svg = parser.parse(svgXml).svg;
   //console.log(svg);
 
   // Top level is svg, then we have images and circles.
